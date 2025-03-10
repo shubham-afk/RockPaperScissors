@@ -1,5 +1,8 @@
 # 🎮 Rock Paper Scissors Game
 
+![Game Screenshot](./screenshots/game-ui.png)
+
+
 Welcome to the **Rock Paper Scissors** game! This is a fun and interactive game built using **React** and **Material-UI (MUI)**. The game is designed to be **responsive, visually appealing, and feature-rich**, making it a great showcase of frontend development skills. 🚀  
 
 ---
@@ -29,3 +32,4 @@ Follow these simple steps to run the game on your local machine:
 ```bash
 git clone https://github.com/yourusername/rock-paper-scissors.git
 cd rock-paper-scissors
+
