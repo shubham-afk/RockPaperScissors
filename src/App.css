@@ -1,38 +1,170 @@
-.App {
+body {
+  background-image: url("C:\Users\stiwa\OneDrive\Desktop\RockPaperScissors\rock-paper-scissors\src\Images\background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.eleven h1 {
+  font-size: 40px;
   text-align: center;
+  line-height: 1.5em;
+  padding-bottom: 25px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #111;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.eleven h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  height: 1px;
+  content: "";
+  background-color: #777;
+  z-index: 4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.eleven h1:after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0px;
+  content: "\00a7";
+  font-size: 30px;
+  line-height: 40px;
+  color: #c50000;
+  font-weight: 400;
+  z-index: 5;
+  display: block;
+  background-color: #f8f8f8;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.choice-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+}
+
+.choice-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice-img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.glowing-text span {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
   color: white;
+  animation: glowing 1.5s ease-in-out infinite,
+    colorChange 2s ease-in-out infinite;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0 0 5px #acff6c)
+      drop-shadow(0 0 10px rgba(172, 255, 108, 0.3294117647));
+    opacity: 1;
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5215686275))
+      drop-shadow(0 0 30px rgba(255, 255, 255, 0.0431372549));
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #acff6c)
+      drop-shadow(0 0 10px rgba(172, 255, 108, 0.3294117647));
+    opacity: 1;
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #acff6c;
+  }
+  33% {
+    color: #ffffff;
+  }
+  66% {
+    color: #deff67;
+  }
+  100% {
+    color: #acff6c;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fancy-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 154, 158, 0.5),
+      0 0 20px rgba(250, 208, 196, 0.5);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    text-shadow: 0 0 20px rgba(255, 154, 158, 0.8),
+      0 0 30px rgba(250, 208, 196, 0.8);
   }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
 }
