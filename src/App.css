@@ -1,5 +1,5 @@
 body {
-  background-image: url("C:\Users\stiwa\OneDrive\Desktop\RockPaperScissors\rock-paper-scissors\src\Images\background.jpg");
+  background-image: url("./Images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
